@@ -176,23 +176,25 @@ public class BattleScoreService {
      */
     private boolean evaluateSpecialRules(Transformer decepticon, Transformer autobot) {
         if(decepticon.getName().equalsIgnoreCase("Predaking")
-                || autobot.getName().equalsIgnoreCase("Optimus Prime")) {
+                || decepticon.getName().equalsIgnoreCase("Optimus Prime")
+                || autobot.getName().equalsIgnoreCase("Optimus Prime")
+                || autobot.getName().equalsIgnoreCase("Predaking")) {
 
             if (decepticon.getName().equalsIgnoreCase("Predaking")
-                    && autobot.getName().equalsIgnoreCase("Optimus Prime")) {
+                    && autobot.getName().equalsIgnoreCase("Optimus Prime")
+                || autobot.getName().equalsIgnoreCase("Predaking")
+                    && decepticon.getName().equalsIgnoreCase("Optimus Prime")) {
                 autobots.removeAll(autobots);
                 decepticons.removeAll(decepticons);
                 return false;
             }
 
             if (decepticon.getName().equalsIgnoreCase("Predaking")
-                    && !autobot.getName().equalsIgnoreCase("Optimus Prime")) {
+                || decepticon.getName().equalsIgnoreCase("Optimus Prime")) {
                 winnersDecepticons.add(decepticon);
                 losersAutobots.add(autobot);
-            }
-
-            if (!decepticon.getName().equalsIgnoreCase("Predaking")
-                    && autobot.getName().equalsIgnoreCase("Optimus Prime")) {
+            } else if (autobot.getName().equalsIgnoreCase("Optimus Prime")
+                    || autobot.getName().equalsIgnoreCase("Predaking")) {
                 winnersAutobots.add(autobot);
                 losersDecepticons.add(decepticon);
             }

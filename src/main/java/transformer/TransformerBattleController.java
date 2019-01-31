@@ -39,14 +39,10 @@ public class TransformerBattleController {
     /**
      * Create new transformer
      *
+     * @param transformer
      * @return HttpStatus OK
      */
     @RequestMapping(value = "/create", method = {RequestMethod.POST, RequestMethod.GET})
-    /*public ResponseEntity createTransformer(@RequestParam String name, @RequestParam char type,
-                                            @RequestParam int strength, @RequestParam int intelligence,
-                                            @RequestParam int speed, @RequestParam int endurance,
-                                            @RequestParam int rank, @RequestParam int courage,
-                                            @RequestParam int firepower, @RequestParam int skill) {*/
     public ResponseEntity createTransformer(@RequestBody Transformer transformer){
         if(transformer.getId() != null) {
             if (this.transformerService.findById(transformer.getId()).isPresent()) {
@@ -84,7 +80,6 @@ public class TransformerBattleController {
      * @param id
      * @return HttpStatus No CONTENT
      */
-    //@PutMapping("/update/{id}")
     @RequestMapping(value = "/update/{id}", method = {RequestMethod.PUT, RequestMethod.GET})
     public ResponseEntity<Transformer> updateTransformer(@RequestBody Transformer transformer, @PathVariable Integer id) {
         Optional<Transformer> transformerOptional = transformerService.findById(id);
@@ -131,7 +126,8 @@ public class TransformerBattleController {
      * @param ids
      * @return HttpStatus OK and the battle score
      */
-    @GetMapping("/battle/{ids}")
+    @GetMapping(value = "/battle/{ids}", produces = "text/plain")
+    @ResponseBody
     public ResponseEntity<String> transformersBattle(@PathVariable List<Integer> ids) {
         List<Transformer> transformers = transformerService.findAllById(ids);
 

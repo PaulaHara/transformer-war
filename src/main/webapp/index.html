@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transformer Battle</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <p>Show all transformers <a href="/transformer/all">here</a></p>
+
+        <div class="titleBox">
+            <span class="title">Transformer Battle Score</span>
+        </div>
+
+        <div ng-hide="ctrl.hasStarted">
+            <div class="generic-container col-md-11" ng-controller="TransformerController as ctrl">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><span class="lead">Transformer Registration Form </span></div>
+                    <div class="formcontainer">
+                        <form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+                            <input type="hidden" ng-model="ctrl.transformer.id" />
+                            <div>
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-1 control-label">Name</label>
+                                    <div class="col-md-4">
+                                        <input type="text" ng-model="ctrl.transformer.name" name="tname"
+                                               class="form-control input-sm" placeholder="Transformer name" required/>
+                                    </div>
+
+                                    <label class="col-md-1 control-label">Type</label>
+                                    <div class="col-md-4">
+                                        <input type="text" ng-model="ctrl.transformer.type" name="ttype"
+                                               class="form-control input-sm" placeholder="type" required/>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-1 control-label">Strength</label>
+                                    <div class="col-md-4">
+                                        <input type="text" ng-model="ctrl.transformer.strength" name="tstrength"
+                                               class="form-control input-sm" placeholder="strength" required/>
+                                    </div>
+
+                                    <label class="col-md-1 control-label">Intelligence</label>
+                                    <div class="col-md-4">
+                                        <input type="text" ng-model="ctrl.transformer.intelligence" name="tintelligence"
+                                               class="form-control input-sm" placeholder="intelligence" required/>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-1 control-label">Speed</label>
+                                    <div class="col-md-4">
+                                        <input type="text" ng-model="ctrl.transformer.speed" name="tspeed"
+                                               class="form-control input-sm" placeholder="speed" required/>
+                                    </div>
+
+                                    <label class="col-md-1 control-label">Endurance</label>
+                                    <div class="col-md-4">
+                                        <input type="text" ng-model="ctrl.transformer.endurance" name="tendurance"
+                                               class="form-control input-sm" placeholder="endurance" required/>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-1 control-label">Rank</label>
+                                    <div class="col-md-4">
+                                        <input type="text" ng-model="ctrl.transformer.rank" name="trank"
+                                               class="form-control input-sm" placeholder="rank" required/>
+                                    </div>
+
+                                    <label class="col-md-1 control-label">Courage</label>
+                                    <div class="col-md-4">
+                                        <input type="text" ng-model="ctrl.transformer.courage" name="tcourage"
+                                               class="form-control input-sm" placeholder="courage" required/>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-1 control-label">Firepower</label>
+                                    <div class="col-md-4">
+                                        <input type="text" ng-model="ctrl.transformer.firepower" name="tfirepower"
+                                               class="form-control input-sm" placeholder="firepower" required/>
+                                    </div>
+
+                                    <label class="col-md-1 control-label">Skill</label>
+                                    <div class="col-md-4">
+                                        <input type="text" ng-model="ctrl.transformer.skill" name="tskill"
+                                               class="form-control input-sm" placeholder="skill" required/>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <input type="submit"  value="{{!ctrl.transformer.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid">
+                                    <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" ng-disabled="myForm.$pristine">Reset Form</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading"><span class="lead">Transformers</span></div>
+                    <div class="tablecontainer">
+                        <table class="table table-hover transformerTable">
+                            <thead class="transformersHead">
+                            <tr>
+                                <th>ID.</th>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Strength</th>
+                                <th>Intelligence</th>
+                                <th>Speed</th>
+                                <th>Endurance</th>
+                                <th>Rank</th>
+                                <th>Courage</th>
+                                <th>Firepower</th>
+                                <th>Skill</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody class="transformerBody">
+                            <tr ng-repeat="u in ctrl.transformers">
+                                <td><span ng-bind="u.id"></span></td>
+                                <td><span ng-bind="u.name"></span></td>
+                                <td><span ng-bind="u.type"></span></td>
+                                <td><span ng-bind="u.strength"></span></td>
+                                <td><span ng-bind="u.intelligence"></span></td>
+                                <td><span ng-bind="u.speed"></span></td>
+                                <td><span ng-bind="u.endurance"></span></td>
+                                <td><span ng-bind="u.rank"></span></td>
+                                <td><span ng-bind="u.courage"></span></td>
+                                <td><span ng-bind="u.firepower"></span></td>
+                                <td><span ng-bind="u.skill"></span></td>
+                                <td>
+                                    <button type="button" ng-click="ctrl.edit(u.id)" class="btn btn-success defaultBtnWidth">Edit</button>
+                                    <button type="button" ng-click="ctrl.remove(u.id)" class="btn btn-danger defaultBtnWidth">Remove</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading"><span class="lead">Battle</span></div>
+
+                    <form name="idsForm">
+                        <label>List of Ids: <input name="idList" ng-model="ctrl.ids" ng-list required></label>
+                    </form>
+
+                    <div class="battleBtn">
+                        <button type="button" ng-click="ctrl.battle()" class="btn btn-success" ng-disabled="ctrl.ids.length < 2">Battle!</button>
+                    </div>
+
+                    <div ng-show="ctrl.battleScore">
+                        <div>Battle result: {{ctrl.battleScore}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/static/js/app.js"></script>
+        <script src="/static/js/service/transformer_service.js"></script>
+    </body>
+</html>

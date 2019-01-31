@@ -1,4 +1,7 @@
 transformer/Service/BattleScoreService.class
 transformer/Service/TransformerService.class
+transformer/exceptions/TransformerNotFoundException.class
 transformer/TransformerRepository.class
 transformer/model/Transformer.class
+transformer/TransformerBattleController.class
+transformer/Application.class

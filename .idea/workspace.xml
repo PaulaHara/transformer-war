@@ -2,48 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="878e39ed-e287-4abd-9715-3d68fa720e68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TransformerBattle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/transformer/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/transformer/Service/BattleScoreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/transformer/Service/TransformerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/transformer/TransformerBattleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/transformer/TransformerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/transformer/exceptions/TransformerNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/transformer/model/Transformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/transformer/ApplicationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/transformer/Service/BattleScoreServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/transformer/TransformerBattleControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/TransformerBattle.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/transformer/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/transformer/Service/BattleScoreService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/transformer/Service/TransformerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/transformer/TransformerBattleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/transformer/TransformerRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/transformer/exceptions/TransformerNotFoundException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/transformer/model/Transformer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-transformer.ApplicationTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-transformer.Service.BattleScoreServiceTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-transformer.TransformerBattleControllerTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/transformer.ApplicationTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/transformer.Service.BattleScoreServiceTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/transformer.TransformerBattleControllerTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/META-INF/TransformerBattle.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/transformer/ApplicationTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/transformer/Service/BattleScoreServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/transformer/TransformerBattleControllerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/controller/transformer_controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/service/transformer_service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transformer/Service/BattleScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transformer/Service/BattleScoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transformer/TransformerBattleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transformer/TransformerBattleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/TransformerBattle.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/transformer/Service/BattleScoreService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transformer/Service/BattleScoreService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/transformer/TransformerBattleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transformer/TransformerBattleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-transformer.ApplicationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-transformer.ApplicationTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-transformer.Service.BattleScoreServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-transformer.Service.BattleScoreServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-transformer.TransformerBattleControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-transformer.TransformerBattleControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/transformer.ApplicationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/transformer.ApplicationTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/transformer.Service.BattleScoreServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/transformer.Service.BattleScoreServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/transformer.TransformerBattleControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/transformer.TransformerBattleControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/TransformerBattle.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/transformer/Service/TransformerServiceTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,14 +34,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/transformer/TransformerBattleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="22" selection-start-line="22" selection-end-line="23" />
+            <state relative-caret-position="115">
+              <caret line="129" column="17" lean-forward="true" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="151" column="26" lean-forward="true" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/service/transformer_service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="76" column="32" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -70,17 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/transformer/model/Transformer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="120">
               <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/transformer/TransformerRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -88,32 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/transformer/TransformerBattleControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="61" column="32" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="61" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/transformer/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/transformer/Service/BattleScoreService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="61" column="32" selection-start-line="60" selection-start-column="42" selection-end-line="61" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -121,17 +94,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/transformer/Service/BattleScoreServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="19" selection-start-line="19" selection-end-line="20" selection-end-column="15" />
+            <state relative-caret-position="180">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/transformer/ApplicationTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/transformer/Service/BattleScoreService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+            <state relative-caret-position="2865">
+              <caret line="197" column="45" selection-start-line="197" selection-start-column="45" selection-end-line="197" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,14 +115,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/transformer/Service/TransformerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
+            <state relative-caret-position="120">
               <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#652#653#0" expanded="true" />
-                <element signature="e#714#715#0" expanded="true" />
-                <element signature="e#950#951#0" expanded="true" />
-                <element signature="e#1011#1012#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,6 +137,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>numOfBattles</find>
+      <find>Player</find>
+      <find>pla</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -186,11 +157,9 @@
         <option value="$PROJECT_DIR$/src/main/java/transformer/Service/TransformerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/transformer/TransformerNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/transformer/model/TransformerDTO.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/transformer/TransformerBattleControllerIntegrationTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/transformer/exceptions/TransformerNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/transformer/Service/BattleScoreService.java" />
         <option value="$PROJECT_DIR$/src/main/java/transformer/Service/TransformerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/transformer/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/transformer/TransformerRepository.java" />
@@ -199,7 +168,15 @@
         <option value="$PROJECT_DIR$/src/test/java/transformer/Service/TransformerServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/transformer/model/Transformer.java" />
         <option value="$PROJECT_DIR$/src/test/java/transformer/TransformerBattleControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/controller/transformer_controller" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/Service/TransformerService.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/transformer/Service/BattleScoreService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/app.js" />
         <option value="$PROJECT_DIR$/src/main/java/transformer/TransformerBattleController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/service/transformer_service.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
       </list>
     </option>
   </component>
@@ -222,7 +199,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,49 +222,51 @@
               <item name="TransformerBattle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformerBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformerBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="transformer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformerBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformerBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="transformer" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformerBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformerBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="transformer" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformerBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformerBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="transformer" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformerBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformerBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TransformerBattle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TransformerBattle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TransformerBattle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TransformerBattle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TransformerBattle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TransformerBattle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TransformerBattle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TransformerBattle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TransformerBattle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TransformerBattle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TransformerBattle" type="b2602c69:ProjectViewProjectNode" />
@@ -325,10 +303,11 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548914409568" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548921542567" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -337,6 +316,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="transformer.Service" />
       <recent name="transformer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/static/js" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -492,22 +474,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24660814" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.24980047" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.38762215" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.38599348" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.32954547" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.32899022" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.36319217" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.39935064" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.3990228" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -526,16 +509,16 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24660814" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.24980047" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.38762215" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.38599348" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.32954547" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.32899022" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.36319217" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.39935064" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.3990228" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -560,24 +543,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/transformer/model/TransformerDTO.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/TransformerValidatorTest.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/transformer/TransformerBattleControllerIntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1993#1994#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/transformer/TransformerBattleControllerIntegrationTest.java" />
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/function/ToIntFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -652,16 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/transformer/Service/BattleScoreService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/transformer/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -696,59 +652,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/transformer/TransformerBattleControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/transformer/Service/TransformerServiceTest.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="61" column="32" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="61" selection-end-column="32" />
+        <state relative-caret-position="412">
+          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/controller/transformer_controller">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/transformer/model/Transformer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="120">
           <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/transformer/Service/TransformerServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/transformer/TransformerBattleControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="360">
+          <caret line="61" column="32" selection-start-line="60" selection-start-column="42" selection-end-line="61" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/transformer/Service/BattleScoreServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/transformer/Service/BattleScoreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2865">
+          <caret line="197" column="45" selection-start-line="197" selection-start-column="45" selection-end-line="197" selection-end-column="45" />
           <folding>
-            <element signature="e#528#529#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/transformer/Service/TransformerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
+        <state relative-caret-position="120">
           <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/transformer/Service/BattleScoreServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/service/transformer_service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="19" selection-start-line="19" selection-end-line="20" selection-end-column="15" />
+        <state relative-caret-position="157">
+          <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="76" column="32" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/transformer/TransformerBattleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="22" selection-start-line="22" selection-end-line="23" />
+        <state relative-caret-position="115">
+          <caret line="129" column="17" lean-forward="true" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="151" column="26" lean-forward="true" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
         </state>
       </provider>
     </entry>
