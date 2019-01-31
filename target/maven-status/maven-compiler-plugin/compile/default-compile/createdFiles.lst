@@ -1,0 +1,4 @@
+transformer/Service/BattleScoreService.class
+transformer/Service/TransformerService.class
+transformer/TransformerRepository.class
+transformer/model/Transformer.class
