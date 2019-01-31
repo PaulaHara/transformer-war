@@ -37,7 +37,7 @@ public class BattleScoreServiceTest {
     }
 
     @Test
-    public void evaluateFightTest() {
+    public void evaluateFightTest() throws Exception {
         String battleScore = scoreService.transformerBattleScore(transformers);
 
         Assert.assertEquals("1 battle\n" +
@@ -46,7 +46,7 @@ public class BattleScoreServiceTest {
     }
 
     @Test
-    public void evaluateFightWithOptimusPrimeTest() {
+    public void evaluateFightWithOptimusPrimeTest() throws Exception {
         transformers = new ArrayList<>();
         transformers.add(new Transformer(1, "Soundwave", 'D', 8, 9, 2,
                 6, 7, 5, 6, 10));
@@ -61,7 +61,7 @@ public class BattleScoreServiceTest {
     }
 
     @Test
-    public void evaluateFightWithOptimusPrimeAndPredakingTest() {
+    public void evaluateFightWithOptimusPrimeAndPredakingTest() throws Exception {
         transformers = new ArrayList<>();
         transformers.add(new Transformer(1, "Predaking", 'D', 1, 1, 1,
                 1, 1, 1, 1, 1));
@@ -71,5 +71,27 @@ public class BattleScoreServiceTest {
         String battleScore = scoreService.transformerBattleScore(transformers);
 
         Assert.assertEquals("1 battle\nTied battle.", battleScore);
+    }
+
+    @Test
+    public void evaluateFightWith0DecepticonsTest() {
+        transformers.remove(0);
+
+        try {
+            scoreService.transformerBattleScore(transformers);
+            Assert.fail();
+        } catch (RuntimeException e) {
+            Assert.assertTrue(e.getMessage().contains("not enough autobots or decepticons"));
+        }
+    }
+
+    @Test
+    public void evaluateFightWith0TransformersTest() {
+        try {
+            scoreService.transformerBattleScore(new ArrayList<>());
+            Assert.fail();
+        } catch (RuntimeException e) {
+            Assert.assertTrue(e.getMessage().contains("List of transformer can't be empty!"));
+        }
     }
 }

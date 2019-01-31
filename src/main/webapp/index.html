@@ -142,15 +142,13 @@
 
                 <div class="panel panel-default">
                     <div class="panel-heading"><span class="lead">Battle</span></div>
+                    <div class="form-group col-md-12">
+                        <form name="idsForm">
+                            <label>List of Ids: <input name="idList" ng-model="ctrl.ids" ng-list required></label>
+                        </form>
 
-                    <form name="idsForm">
-                        <label>List of Ids: <input name="idList" ng-model="ctrl.ids" ng-list required></label>
-                    </form>
-
-                    <div class="battleBtn">
                         <button type="button" ng-click="ctrl.battle()" class="btn btn-success" ng-disabled="ctrl.ids.length < 2">Battle!</button>
                     </div>
-
                     <div ng-show="ctrl.battleScore">
                         <div>Battle result: {{ctrl.battleScore}}</div>
                     </div>

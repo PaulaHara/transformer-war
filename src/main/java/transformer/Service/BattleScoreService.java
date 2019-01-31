@@ -27,17 +27,21 @@ public class BattleScoreService {
      *
      * @param transformers
      */
-    private void setTeam(List<Transformer> transformers) {
+    private void setTeam(List<Transformer> transformers) throws RuntimeException {
+        if(transformers == null || transformers != null && transformers.size() == 0) {
+            throw new RuntimeException("List of transformer can't be empty!");
+        }
+
         for(Transformer transformer : transformers) {
             if(transformer.getType() == 'A') {
-                autobots.add(transformer);
+                this.autobots.add(transformer);
             } else {
-                decepticons.add(transformer);
+                this.decepticons.add(transformer);
             }
         }
 
-        Collections.sort(autobots, Comparator.comparingInt(Transformer::getRank).reversed());
-        Collections.sort(decepticons, Comparator.comparingInt(Transformer::getRank).reversed());
+        Collections.sort(this.autobots, Comparator.comparingInt(Transformer::getRank).reversed());
+        Collections.sort(this.decepticons, Comparator.comparingInt(Transformer::getRank).reversed());
     }
 
     /**
@@ -52,16 +56,30 @@ public class BattleScoreService {
     }
 
     /**
+     * Initialize all lists
+     */
+    private void initializeLists() {
+        this.autobots = new ArrayList<>();
+        this.decepticons = new ArrayList<>();
+        this.winnersAutobots = new ArrayList<>();
+        this.winnersDecepticons = new ArrayList<>();
+        this.losersAutobots = new ArrayList<>();
+        this.losersDecepticons = new ArrayList<>();
+    }
+
+    /**
      * Evaluates a fight between Autobots and decepticons. <br>
      * The final score will be given in a String.
      *
      * @param transformers
      * @return String with the final result of the battle
      */
-    public String transformerBattleScore(List<Transformer> transformers){
-        initializeLists();
+    public String transformerBattleScore(List<Transformer> transformers) throws RuntimeException {
+        this.initializeLists();
 
-        setTeam(transformers);
+        this.setTeam(transformers);
+
+        this.verifyNumOfTransformersToFight();
 
         int numOfFights = decepticons.size() < autobots.size() ? decepticons.size() : autobots.size();
 
@@ -73,26 +91,28 @@ public class BattleScoreService {
             if(decepticon.getName().equalsIgnoreCase("Predaking")
                     || autobot.getName().equalsIgnoreCase("Optimus Prime")) {
 
-                continueFight = evaluateSpecialRules(decepticon, autobot);
+                continueFight = this.evaluateSpecialRules(decepticon, autobot);
 
                 if(!continueFight) {
-                    return getFinalBattleScore(numOfFights);
+                    return this.getFinalBattleScore(numOfFights);
                 }
             } else {
-                evaluateFight(decepticon, autobot);
+                this.evaluateFight(decepticon, autobot);
             }
         }
 
-        return getFinalBattleScore(numOfFights);
+        return this.getFinalBattleScore(numOfFights);
     }
 
-    private void initializeLists() {
-        autobots = new ArrayList<>();
-        decepticons = new ArrayList<>();
-        winnersAutobots = new ArrayList<>();
-        winnersDecepticons = new ArrayList<>();
-        losersAutobots = new ArrayList<>();
-        losersDecepticons = new ArrayList<>();
+    /**
+     * Verify if there is at least 1 autobot and 1 decepticon.
+     *
+     * @throws Exception
+     */
+    private void verifyNumOfTransformersToFight() throws RuntimeException {
+        if(this.decepticons.size() == 0 || this.autobots.size() == 0){
+            throw new RuntimeException("There is not enough autobots or decepticons to fight!");
+        }
     }
 
     /**
@@ -106,19 +126,19 @@ public class BattleScoreService {
      */
     private String getFinalBattleScore(int numOfBattles) {
         String battleScore = numOfBattles + " battle\nWinning team (";
-        if(winnersAutobots.size() > winnersDecepticons.size()) {
-            decepticons.removeAll(losersDecepticons);
+        if(this.winnersAutobots.size() > this.winnersDecepticons.size()) {
+            this.decepticons.removeAll(this.losersDecepticons);
 
-            battleScore += "Autobots): " + winnersAutobots.toString()
+            battleScore += "Autobots): " + this.winnersAutobots.toString()
                     .replace("[", "").replace("]", "")
-                    + "\nSurvivors from the losing team (Decepticons): " + decepticons.toString()
+                    + "\nSurvivors from the losing team (Decepticons): " + this.decepticons.toString()
                     .replace("[", "").replace("]", "");
-        } else if(winnersAutobots.size() < winnersDecepticons.size()) {
-            autobots.removeAll(losersAutobots);
+        } else if(this.winnersAutobots.size() < this.winnersDecepticons.size()) {
+            this.autobots.removeAll(this.losersAutobots);
 
-            battleScore += "Decepticons): " + winnersDecepticons.toString()
+            battleScore += "Decepticons): " + this.winnersDecepticons.toString()
                     .replace("[", "").replace("]", "")
-                    + "\nSurvivors from the losing team (Autobots): " + autobots.toString()
+                    + "\nSurvivors from the losing team (Autobots): " + this.autobots.toString()
                     .replace("[", "").replace("]", "");
         } else {
             battleScore = numOfBattles + " battle\nTied battle.";
@@ -129,11 +149,14 @@ public class BattleScoreService {
     /**
      * A battle between opponents uses the following rules:
      * <ul>
-     *  <li>If any fighter is down 4 or more points of courage and 3 or more points of strength
-     *  compared to their opponent, the opponent automatically wins the face-off
-     *  regardless of overall rating (opponent has ran away)</li>
-     *  <li>Otherwise, if one of the fighters is 3 or more points of skill above their opponent,
-     *  they win the fight regardless of overall rating</li>
+     *     <li>First verify this conditions:</li>
+     *     <ul>
+     *        <li>If any fighter is down 4 or more points of courage and 3 or more points of strength
+     *            compared to their opponent, the opponent automatically wins the face-off
+     *            regardless of overall rating (opponent has ran away)</li>
+     *        <li>Otherwise, if one of the fighters is 3 or more points of skill above their opponent,
+     *            they win the fight regardless of overall rating</li>
+     *      </ul>
      *  <li>The winner is the Transformer with the highest overall rating</li>
      *  <li>In the event of a tie, both are destroyed</li>
      * </ul>
@@ -142,27 +165,52 @@ public class BattleScoreService {
      * @param autobot
      */
     private void evaluateFight(Transformer decepticon, Transformer autobot) {
+        boolean evaluationComplete = false;
+
         if ((decepticon.getCourage() - autobot.getCourage() >= 4 &&
-                decepticon.getStrength() - autobot.getStrength() >= 3)
-                || decepticon.getSkill() - autobot.getSkill() >= 3) {
-            winnersDecepticons.add(decepticon);
-            losersAutobots.add(autobot);
+                decepticon.getStrength() - autobot.getStrength() >= 3)) {
+            addWinnerAndOrLoser(decepticon, autobot, this.winnersDecepticons, this.losersAutobots);
+            evaluationComplete = true;
         } else if ((autobot.getCourage() - decepticon.getCourage() >= 4 &&
-                autobot.getStrength() - decepticon.getStrength() >= 3)
-                || autobot.getSkill() - decepticon.getSkill() >= 3) {
-            winnersAutobots.add(autobot);
-            losersDecepticons.add(decepticon);
-        } else if (getRating(decepticon) > getRating(autobot)) {
-            winnersDecepticons.add(decepticon);
-            losersAutobots.add(autobot);
-        } else if (getRating(decepticon) < getRating(autobot)) {
-            winnersAutobots.add(autobot);
-            losersDecepticons.add(decepticon);
-        }else {
-            // Tie -> Both lose
-            losersAutobots.add(autobot);
-            losersDecepticons.add(decepticon);
+                autobot.getStrength() - decepticon.getStrength() >= 3)) {
+            addWinnerAndOrLoser(autobot, decepticon, this.winnersAutobots, this.losersDecepticons);
+            evaluationComplete = true;
         }
+
+        if(!evaluationComplete) {
+            if (decepticon.getSkill() - autobot.getSkill() >= 3) {
+                addWinnerAndOrLoser(decepticon, autobot, this.winnersDecepticons, this.losersAutobots);
+                evaluationComplete = true;
+            } else if (autobot.getSkill() - decepticon.getSkill() >= 3) {
+                addWinnerAndOrLoser(autobot, decepticon, this.winnersAutobots, this.losersDecepticons);
+                evaluationComplete = true;
+            }
+        }
+
+        if(!evaluationComplete) {
+            if (getRating(decepticon) > getRating(autobot)) {
+                addWinnerAndOrLoser(decepticon, autobot, this.winnersDecepticons, this.losersAutobots);
+            } else if (getRating(decepticon) < getRating(autobot)) {
+                addWinnerAndOrLoser(autobot, decepticon, this.winnersAutobots, this.losersDecepticons);
+            } else {
+                // Tie -> Both lose
+                addWinnerAndOrLoser(autobot, decepticon, this.losersAutobots, this.losersDecepticons);
+            }
+        }
+    }
+
+    /**
+     * Add loser and winner or only losers to the lists
+     *
+     * @param winnerOrLoser
+     * @param loser
+     * @param winnerOrLoserList
+     * @param loserList
+     */
+    private void addWinnerAndOrLoser(Transformer winnerOrLoser, Transformer loser,
+                                     List<Transformer> winnerOrLoserList, List<Transformer> loserList) {
+        winnerOrLoserList.add(winnerOrLoser);
+        loserList.add(loser);
     }
 
     /**
@@ -184,19 +232,17 @@ public class BattleScoreService {
                     && autobot.getName().equalsIgnoreCase("Optimus Prime")
                 || autobot.getName().equalsIgnoreCase("Predaking")
                     && decepticon.getName().equalsIgnoreCase("Optimus Prime")) {
-                autobots.removeAll(autobots);
-                decepticons.removeAll(decepticons);
+                this.autobots.removeAll(autobots);
+                this.decepticons.removeAll(decepticons);
                 return false;
             }
 
             if (decepticon.getName().equalsIgnoreCase("Predaking")
                 || decepticon.getName().equalsIgnoreCase("Optimus Prime")) {
-                winnersDecepticons.add(decepticon);
-                losersAutobots.add(autobot);
+                addWinnerAndOrLoser(decepticon, autobot, this.winnersDecepticons, this.losersAutobots);
             } else if (autobot.getName().equalsIgnoreCase("Optimus Prime")
                     || autobot.getName().equalsIgnoreCase("Predaking")) {
-                winnersAutobots.add(autobot);
-                losersDecepticons.add(decepticon);
+                addWinnerAndOrLoser(autobot, decepticon, this.winnersAutobots, this.losersDecepticons);
             }
         }
 
