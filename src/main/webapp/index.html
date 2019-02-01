@@ -10,92 +10,100 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
     </head>
     <body ng-app="myApp">
-        <p>Show all transformers <a href="/transformer/all">here</a></p>
-
-        <div class="titleBox">
-            <span class="title">Transformer Battle Score</span>
-        </div>
-
         <div ng-hide="ctrl.hasStarted">
             <div class="generic-container col-md-11" ng-controller="TransformerController as ctrl">
                 <div class="panel panel-default">
                     <div class="panel-heading"><span class="lead">Transformer Registration Form </span></div>
-                    <div class="formcontainer">
-                        <form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
-                            <input type="hidden" ng-model="ctrl.transformer.id" />
-                            <div>
-                                <div class="form-group col-md-12">
-                                    <label class="col-md-1 control-label">Name</label>
-                                    <div class="col-md-4">
-                                        <input type="text" ng-model="ctrl.transformer.name" name="tname"
-                                               class="form-control input-sm" placeholder="Transformer name" required/>
-                                    </div>
-
-                                    <label class="col-md-1 control-label">Type</label>
-                                    <div class="col-md-4">
-                                        <input type="text" ng-model="ctrl.transformer.type" name="ttype"
-                                               class="form-control input-sm" placeholder="type" required/>
-                                    </div>
+                    <form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+                        <input type="hidden" ng-model="ctrl.transformer.id" />
+                        <div>
+                            <div class="form-group col-md-12">
+                                <label class="col-md-1 control-label">Name</label>
+                                <div class="col-md-4">
+                                    <input type=text ng-model="ctrl.transformer.name" name="tname"
+                                           class="form-control input-sm" placeholder="Transformer name" required/>
                                 </div>
-                                <div class="form-group col-md-12">
-                                    <label class="col-md-1 control-label">Strength</label>
-                                    <div class="col-md-4">
-                                        <input type="text" ng-model="ctrl.transformer.strength" name="tstrength"
-                                               class="form-control input-sm" placeholder="strength" required/>
-                                    </div>
 
-                                    <label class="col-md-1 control-label">Intelligence</label>
-                                    <div class="col-md-4">
-                                        <input type="text" ng-model="ctrl.transformer.intelligence" name="tintelligence"
-                                               class="form-control input-sm" placeholder="intelligence" required/>
-                                    </div>
+                                <label class="col-md-1 control-label">Type</label>
+                                <div class="col-md-1">
+                                    <label>A</label>
+                                    <input ng-disabled="ctrl.typeD" type=checkbox ng-model="ctrl.typeA"
+                                           name="ttypeA" style="width:20px;height:20px;" placeholder="type"
+                                          ng-required="!ctrl.typeA && !ctrl.typeD"/>
                                 </div>
-                                <div class="form-group col-md-12">
-                                    <label class="col-md-1 control-label">Speed</label>
-                                    <div class="col-md-4">
-                                        <input type="text" ng-model="ctrl.transformer.speed" name="tspeed"
-                                               class="form-control input-sm" placeholder="speed" required/>
-                                    </div>
-
-                                    <label class="col-md-1 control-label">Endurance</label>
-                                    <div class="col-md-4">
-                                        <input type="text" ng-model="ctrl.transformer.endurance" name="tendurance"
-                                               class="form-control input-sm" placeholder="endurance" required/>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label class="col-md-1 control-label">Rank</label>
-                                    <div class="col-md-4">
-                                        <input type="text" ng-model="ctrl.transformer.rank" name="trank"
-                                               class="form-control input-sm" placeholder="rank" required/>
-                                    </div>
-
-                                    <label class="col-md-1 control-label">Courage</label>
-                                    <div class="col-md-4">
-                                        <input type="text" ng-model="ctrl.transformer.courage" name="tcourage"
-                                               class="form-control input-sm" placeholder="courage" required/>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label class="col-md-1 control-label">Firepower</label>
-                                    <div class="col-md-4">
-                                        <input type="text" ng-model="ctrl.transformer.firepower" name="tfirepower"
-                                               class="form-control input-sm" placeholder="firepower" required/>
-                                    </div>
-
-                                    <label class="col-md-1 control-label">Skill</label>
-                                    <div class="col-md-4">
-                                        <input type="text" ng-model="ctrl.transformer.skill" name="tskill"
-                                               class="form-control input-sm" placeholder="skill" required/>
-                                    </div>
-                                </div>
-                                <div class="form-actions">
-                                    <input type="submit"  value="{{!ctrl.transformer.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid">
-                                    <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" ng-disabled="myForm.$pristine">Reset Form</button>
+                                <div class="col-md-1">
+                                    <label>D</label>
+                                    <input ng-disabled="ctrl.typeA" type=checkbox ng-model="ctrl.typeD"
+                                           name="ttypeB" style="width:20px;height:20px;" placeholder="type"
+                                           ng-required="!ctrl.typeA && !ctrl.typeD"/>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="form-group col-md-12">
+                                <label class="col-md-1 control-label">Strength</label>
+                                <div class="col-md-4">
+                                    <input type=number ng-model="ctrl.transformer.strength" name="tstrength"
+                                           class="form-control input-sm" placeholder="strength"
+                                           min="1" max="10" required/>
+                                </div>
+
+                                <label class="col-md-1 control-label">Intelligence</label>
+                                <div class="col-md-4">
+                                    <input type=number ng-model="ctrl.transformer.intelligence" name="tintelligence"
+                                           class="form-control input-sm" placeholder="intelligence"
+                                           min="1" max="10" required/>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label class="col-md-1 control-label">Speed</label>
+                                <div class="col-md-4">
+                                    <input type=number ng-model="ctrl.transformer.speed" name="tspeed"
+                                           class="form-control input-sm" placeholder="speed"
+                                           min="1" max="10" required/>
+                                </div>
+
+                                <label class="col-md-1 control-label">Endurance</label>
+                                <div class="col-md-4">
+                                    <input type=number ng-model="ctrl.transformer.endurance" name="tendurance"
+                                           class="form-control input-sm" placeholder="endurance"
+                                           min="1" max="10" required/>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label class="col-md-1 control-label">Rank</label>
+                                <div class="col-md-4">
+                                    <input type=number ng-model="ctrl.transformer.rank" name="trank"
+                                           class="form-control input-sm" placeholder="rank"
+                                           min="1" max="10" required/>
+                                </div>
+
+                                <label class="col-md-1 control-label">Courage</label>
+                                <div class="col-md-4">
+                                    <input type=number ng-model="ctrl.transformer.courage" name="tcourage"
+                                           class="form-control input-sm" placeholder="courage"
+                                           min="1" max="10" required/>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label class="col-md-1 control-label">Firepower</label>
+                                <div class="col-md-4">
+                                    <input type=number ng-model="ctrl.transformer.firepower" name="tfirepower"
+                                           class="form-control input-sm" placeholder="firepower"
+                                           min="1" max="10" required/>
+                                </div>
+
+                                <label class="col-md-1 control-label">Skill</label>
+                                <div class="col-md-4">
+                                    <input type=number ng-model="ctrl.transformer.skill" name="tskill"
+                                           class="form-control input-sm" placeholder="skill"
+                                           min="1" max="10" required/>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <input type="submit"  value="{{!ctrl.transformer.id ? 'Add' : 'Update'}}"
+                                       class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid">
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading"><span class="lead">Transformers</span></div>
@@ -142,15 +150,16 @@
 
                 <div class="panel panel-default">
                     <div class="panel-heading"><span class="lead">Battle</span></div>
-                    <div class="form-group col-md-12">
+                    <div>
                         <form name="idsForm">
-                            <label>List of Ids: <input name="idList" ng-model="ctrl.ids" ng-list required></label>
-                        </form>
+                            <label>List of Ids: <input name="idList" ng-model="ctrl.ids" ng-list></label>
 
-                        <button type="button" ng-click="ctrl.battle()" class="btn btn-success" ng-disabled="ctrl.ids.length < 2">Battle!</button>
-                    </div>
-                    <div ng-show="ctrl.battleScore">
-                        <div>Battle result: {{ctrl.battleScore}}</div>
+                            <button type="button" ng-click="ctrl.battle()" class="btn btn-success" ng-disabled="ctrl.ids.length < 2">Battle!</button>
+
+                            <div ng-show="ctrl.battleScore">
+                                <div>Battle result: {{ctrl.battleScore}}</div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

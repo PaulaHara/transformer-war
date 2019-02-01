@@ -4,15 +4,19 @@ var App = angular.module('myApp',[]);
 
 App.controller('TransformerController', ['$scope', 'TransformerService', function($scope, TransformerService) {
     var self = this;
-    self.transformer = {id:null, name:'', type:'', strength:0, intelligence:0, speed:0, endurance:0, rank:0, courage:0, firepower:0, skill:0};
+    self.transformer = {id:null, name:"", type:"", strength:null, intelligence:null, speed:null, endurance:null,
+                        rank:null, courage:null, firepower:null, skill:null};
     self.transformers = [];
     self.ids = [];
     self.battleScore = "";
+    self.typeA = false;
+    self.typeD = false;
 
     self.submit = submit;
     self.edit = edit;
     self.remove = remove;
     self.battle = battle;
+    self.updateTransformerType = updateTransformerType;
 
     self.hasStarted = false;
 
@@ -83,6 +87,8 @@ App.controller('TransformerController', ['$scope', 'TransformerService', functio
     }
 
     function submit() {
+        self.updateTransformerType();
+
         if(self.transformer.id === null){
             console.log('Saving New Transformer', self.transformer);
             createTransformer(self.transformer);
@@ -106,6 +112,15 @@ App.controller('TransformerController', ['$scope', 'TransformerService', functio
         for(var i = 0; i < self.transformers.length; i++){
             if(self.transformers[i].id === id) {
                 self.transformer = angular.copy(self.transformers[i]);
+
+                if(self.transformer.type == "A") {
+                    self.typeA = true;
+                    self.typeD = false;
+                } else {
+                    self.typeD = true;
+                    self.typeA = false;
+                }
+
                 break;
             }
         }
@@ -117,8 +132,19 @@ App.controller('TransformerController', ['$scope', 'TransformerService', functio
     }
 
     function reset(){
-        self.transformer = {id:null, name:'', type:'', strength:0, intelligence:0, speed:0, endurance:0, rank:0, courage:0, firepower:0, skill:0};
+        self.transformer = {id:null, name:"", type:"", strength:null, intelligence:null, speed:null, endurance:null,
+                                                   rank:null, courage:null, firepower:null, skill:null};
+        self.typeA = false;
+        self.typeD = false;
         $scope.myForm.$setPristine(); //reset Form
+    }
+
+    function updateTransformerType(){
+        if(self.typeA) {
+            self.transformer.type = "A";
+        } else if(self.typeD) {
+            self.transformer.type = "D";
+        }
     }
 
 }]);

@@ -39,7 +39,8 @@ public class TransformerBattleController {
      * Create new transformer
      *
      * @param transformer
-     * @return HttpStatus OK
+     * @return Success: HttpStatus CREATED and new Transformer
+     *         Fail: HttpStatus CONFLICT
      */
     @RequestMapping(value = "/create", method = {RequestMethod.POST, RequestMethod.GET})
     public ResponseEntity<Transformer> createTransformer(@RequestBody Transformer transformer){
@@ -58,7 +59,8 @@ public class TransformerBattleController {
      * Search transformer by Id
      *
      * @param id
-     * @return HttpStatus OK and one transformer
+     * @return Success: HttpStatus OK and one transformer
+     *         Fail: HttpStatus NOT FOUND
      */
     @GetMapping("/get/{id}")
     public ResponseEntity<Transformer> getTransformerById(@PathVariable Integer id) {
@@ -76,7 +78,8 @@ public class TransformerBattleController {
      *
      * @param transformer
      * @param id
-     * @return HttpStatus No CONTENT
+     * @return Success: HttpStatus NO CONTENT <br>
+     *         Fail: HttpStatus BAD REQUEST (null id) or HttpStatus NOT FOUND (transformer don't exist)
      */
     @RequestMapping(value = "/update/{id}", method = {RequestMethod.PUT, RequestMethod.GET})
     public ResponseEntity<Transformer> updateTransformer(@RequestBody Transformer transformer, @PathVariable Integer id) {
@@ -98,7 +101,8 @@ public class TransformerBattleController {
      * Delete transformer by Id
      *
      * @param id
-     * @return HttpStatus NO CONTENT
+     * @return Success: HttpStatus NO CONTENT <br>
+     *         Fail: HttpStatus NOT FOUND
      */
     @DeleteMapping("/delete/{id}")
     public ResponseEntity deleteTransformer(@PathVariable Integer id) {
@@ -124,8 +128,9 @@ public class TransformerBattleController {
     /**
      * Evaluate battle between Autobots and Decepticons.
      *
-     * @param ids
-     * @return HttpStatus OK and the battle score
+     * @param ids List of transformers id
+     * @return Success: HttpStatus OK and the battle score <br>
+     *         Fail: HttpStatus BAD REQUEST -> "Not enough transformers to battle"
      */
     @GetMapping(value = "/battle/{ids}", produces = "text/plain")
     @ResponseBody
