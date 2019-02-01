@@ -29,14 +29,14 @@ Create: (POST) http://localhost:8080/transformer/create  <br>
 (Body) { 
             "name": "Autobot",
             "type": "A", 
-            "strength": 17, 
-            "intelligence": 20, 
+            "strength": 7, 
+            "intelligence": 10, 
             "speed": 5,  
-            "endurance": 12, 
+            "endurance": 10, 
             "rank": 5,  
             "courage": 10, 
-            "firepower": 18,  
-            "skill": 15 
+            "firepower": 8,  
+            "skill": 5 
         }
 ```
 Update: (PUT) http://localhost:8080/transformer/update/{id}  <br>
@@ -48,10 +48,10 @@ Update: (PUT) http://localhost:8080/transformer/update/{id}  <br>
             "strength": 7,
             "intelligence": 8,
             "speed": 5,
-            "endurance": 18,
+            "endurance": 8,
             "rank": 4,
             "courage": 5,
-            "firepower": 25,
+            "firepower": 5,
             "skill": 7
         }
 ```
